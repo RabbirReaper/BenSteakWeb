@@ -110,7 +110,7 @@
         <BRow class="align-items-center">
           <BCol md="6">
             <p class="copyright">
-              © 2025 尊爵品牌 All Rights Reserved.
+              © 2025 犇の野牛排 All Rights Reserved.
             </p>
           </BCol>
           <BCol md="6" class="text-md-end">
