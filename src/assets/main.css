@@ -1,35 +1,397 @@
-@import './base.css';
+/* Bootstrap Icons 已在 main.js 中載入 */
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* 載入自定義字體 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+/* CSS 變數定義 */
+:root {
+  --primary-gold: #d4af37;
+  --secondary-gold: #f8e08e;
+  --dark-gold: #b08d28;
+  --luxury-black: #1a1a1a;
+  --luxury-gray: #4a4a4a;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
+
+  /* 字體 */
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Noto Sans TC', sans-serif;
+
+  /* 過渡效果 */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.8s ease;
+
+  /* 陰影 */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
-a,
-.green {
+/* 全域樣式重置 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--luxury-black);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 自定義選取顏色 */
+::selection {
+  background-color: var(--primary-gold);
+  color: var(--luxury-black);
+}
+
+::-moz-selection {
+  background-color: var(--primary-gold);
+  color: var(--luxury-black);
+}
+
+/* 標題樣式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+/* 段落樣式 */
+p {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* 連結樣式 */
+a {
+  color: var(--primary-gold);
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  transition: var(--transition-fast);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+a:hover {
+  color: var(--secondary-gold);
+  text-decoration: none;
+}
+
+/* 圖片樣式 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 列表樣式 */
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+/* 自定義容器 */
+.luxury-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 區塊通用樣式 */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* 金色文字效果 */
+.golden-text {
+  background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 奢華按鈕樣式 */
+.luxury-btn {
+  background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+  border: none;
+  color: var(--luxury-black);
+  padding: 12px 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-fast);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.luxury-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+  color: var(--luxury-black);
+}
+
+.luxury-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.luxury-btn:hover::before {
+  left: 100%;
+}
+
+/* 標題裝飾線 */
+.luxury-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.luxury-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold));
+  margin: 20px auto;
+}
+
+/* 載入動畫 */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--luxury-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader-inner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(212, 175, 55, 0.3);
+  border-top: 3px solid var(--primary-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@media (min-width: 1024px) {
+/* 滾動條樣式 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--luxury-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-gold);
+}
+
+/* 動畫類別 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 光暈效果 */
+.golden-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.golden-glow:hover {
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+}
+
+/* 背景圖案 */
+.luxury-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(212, 175, 55, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 50px 50px;
+}
+
+/* 響應式工具類別 */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .luxury-container {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .luxury-btn {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* 工具類別 */
+.text-gold {
+  color: var(--primary-gold) !important;
+}
+.bg-gold {
+  background-color: var(--primary-gold) !important;
+}
+.bg-luxury-black {
+  background-color: var(--luxury-black) !important;
+}
+
+.mt-section {
+  margin-top: 80px !important;
+}
+.mb-section {
+  margin-bottom: 80px !important;
+}
+.py-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+/* 防止 FOUC (Flash of Unstyled Content) */
+.no-js {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* 打印樣式 */
+@media print {
   body {
-    display: flex;
-    place-items: center;
+    background: white;
+    color: black;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .no-print {
+    display: none !important;
   }
 }
