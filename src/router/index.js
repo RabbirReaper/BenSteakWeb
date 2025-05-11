@@ -9,7 +9,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        title: '尊爵品牌 - 極致奢華體驗'
+        title: '犇の野牛排'
       }
     }
   ],
