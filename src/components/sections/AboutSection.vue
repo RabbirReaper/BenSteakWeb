@@ -5,15 +5,15 @@
         <BCol lg="6" class="mb-4 mb-lg-0">
           <div class="about-content" data-aos="fade-right">
             <h2 class="section-title luxury-heading mb-4">
-              關於<span class="golden-text">尊爵品牌</span>
+              關於<span class="golden-text">犇の野牛排</span>
             </h2>
             <p class="about-description mb-4">
-              成立於1998年，我們致力於創造頂級奢華體驗。每一個細節都經過精心雕琢，
+              成立於2021年，我們致力於創造頂級奢華體驗。每一個細節都經過精心雕琢，
               從環境氛圍到服務品質，無不體現著我們對完美的追求。
             </p>
             <p class="about-description mb-4">
               我們相信，真正的奢華不僅是外在的華麗，更是內在的品質。
-              二十多年來，我們始終堅持這個理念，為每一位貴賓提供無與倫比的尊榮體驗。
+              數年來，我們始終堅持這個理念，為每一位貴賓提供無與倫比的尊榮體驗。
             </p>
 
             <div class="achievement-list mb-4">
@@ -63,7 +63,7 @@
               <div class="image-overlay"></div>
             </div>
             <div class="floating-card" data-aos="zoom-in" data-aos-delay="300">
-              <h3>5+</h3>
+              <h3>4+</h3>
               <p>年專業經驗</p>
             </div>
           </div>

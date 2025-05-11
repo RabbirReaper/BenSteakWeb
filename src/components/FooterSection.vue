@@ -71,7 +71,7 @@
                 </li>
                 <li>
                   <i class="bi bi-envelope me-2"></i>
-
+                  rabbirreaper@gmail.com
                 </li>
                 <li>
                   <i class="bi bi-clock me-2"></i>
@@ -119,7 +119,8 @@
               <span class="divider">|</span>
               <a href="#">服務條款</a>
               <span class="divider">|</span>
-              <a href="#">網站地圖</a>
+              <a
+                href="https://www.google.com/maps/place/%E7%8A%87%E3%81%AE%E9%87%8E%E5%B9%B3%E5%83%B9%E5%8E%9F%E5%A1%8A%E7%89%9B%E6%8E%92/@22.6438888,120.3049714,926m/data=!3m2!1e3!4b1!4m6!3m5!1s0x346e0543f58b83e7:0x46c0c29af7f5f45c!8m2!3d22.6438839!4d120.3075517!16s%2Fg%2F11j5zz1kl6?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D">網站地圖</a>
             </div>
           </BCol>
         </BRow>

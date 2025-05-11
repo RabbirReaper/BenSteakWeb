@@ -19,7 +19,7 @@
         <BCol lg="8" class="mx-auto text-center">
           <div class="animate__animated animate__fadeInUp">
             <h1 class="hero-title mb-4">
-              <span class="golden-text">尊爵不凡</span>
+              <span class="golden-text">犇の野牛排</span>
               <br />
               <span class="subtitle">極致奢華體驗</span>
             </h1>
@@ -34,7 +34,7 @@
               </BButton>
               <BButton variant="outline-light" class="hero-btn-outline" size="lg">
                 <span class="me-2">📞</span>
-                立即預約
+                立即訂購
               </BButton>
             </div>
           </div>
@@ -202,9 +202,14 @@ import { BContainer, BRow, BCol, BButton } from 'bootstrap-vue-next'
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scroll-mouse {
